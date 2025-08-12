@@ -41,5 +41,6 @@ with open('list.csv', mode='r') as file:
 
         my_server.send_message(msg)
         print(f"Mail sent to {cur_address} successfully")
+        time.sleep(10)
 
 my_server.quit()
