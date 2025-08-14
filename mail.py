@@ -9,7 +9,7 @@ with open("config.json") as f:
     config = json.load(f)
 
 # Open the plain text file whose name is in textfile for reading.
-textfile = "/home/mhsn/Desktop/automation/test.txt"
+textfile = "/home/mhsn/Desktop/automation/application_template.txt"
 resume = "/home/mhsn/cv/Muhsin_Ertekin.pdf"
 
 ctype, encoding = mimetypes.guess_type(resume)
@@ -49,7 +49,7 @@ with open('list.csv', mode='r') as file:
 
         msg['From'] = config["sender"]
         msg['To'] = cur_address
-        msg['Subject'] = f"Staj Başvurusu"
+        msg['Subject'] = "Staj Başvurusu"
         msg.add_attachment(resume_data, maintype=maintype, subtype=subtype, filename="Muhsin_Ertekin.pdf")
 
         my_server.send_message(msg)
